@@ -6,7 +6,7 @@ def filter_based_on_followers_count(json_data, given_followers_count):
   filtered_data = []
   for json_object in json_data:
     follower_count = json_object['user_profile'].get(filter)
-    if (follower_count != None and minimum_followers <= follower_count <= maximum_followers):
+    if (follower_count != None and int(minimum_followers) <= follower_count <= int(maximum_followers)):
       filtered_data.append(json_object)
   return filtered_data
 
