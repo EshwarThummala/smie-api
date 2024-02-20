@@ -27,11 +27,17 @@ def filter_based_on_avg_views(json_object, given_avg_views):
     return True
   return False
 
-def filter_based_on_id_available(json_object, given_social_id):
+def filter_based_on_id_available(json_object, given_social_ids):
   social_media_ids = json_object.get('social_media')
-  if(social_media_ids and social_media_ids.get(given_social_id)):
-    return True if social_media_ids.get(given_social_id) != '' else False
-  return False
+  if(social_media_ids):
+    for given_social_id in given_social_ids:
+      if(not social_media_ids.get(given_social_id)):
+        return False
+      elif(social_media_ids.get(given_social_id) == ''):
+        return False
+  else:
+    return False
+  return True
 
 def filter_based_on_username(json_object, given_approximate_username):
   user_profile = json_object.get('user_profile')
