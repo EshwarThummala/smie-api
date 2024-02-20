@@ -31,6 +31,6 @@ def filter_based_on_avg_views(json_data, given_avg_views):
         number_of_posts += 1
     if(number_of_posts != 0):
       avg_views /= number_of_posts
-    if(avg_views >= given_avg_views):
+    if(avg_views >= int(given_avg_views)):
       filtered_data.append(json_obj)
   return filtered_data
