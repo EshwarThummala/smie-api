@@ -15,7 +15,7 @@ Make sure you have the following installed on your local machine:
 
     ```bash
     git clone https://github.com/EshwarThummala/smie-api.git
-    cd your-project
+    cd smie-api
     ```
 
 2. **Install dependencies:**
