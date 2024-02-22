@@ -56,7 +56,9 @@ If you encounter any issues during setup or while running the application, here 
 - **Issue:** ImportError: No module named 'flask'
   **Solution:** Make sure Flask is installed in your Python environment. You can install it using pip: `pip install Flask`.
 
-- More troubleshooting tips are on the way...
+- **Issue:(Mac)** Could not find 'watchdog'
+- **Soluction:** Make sure you install watchdog, if it is already installed, please upgrade it.
+- **Other Modules:** If you find any error, saying that it could not find any module or package. Please install it, if already installed, then try to upgrade it.  
 
 If you're unable to resolve the issue, please feel free to open an issue on GitHub, and I will be happy to assist you.
 
