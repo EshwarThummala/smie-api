@@ -3,6 +3,7 @@ from utils.filters import filter_based_on_followers_count
 from utils.filters import filter_based_on_keyword
 from utils.filters import filter_based_on_id_available
 from utils.filters import filter_based_on_username
+from utils.filters import filter_based_on_country
 from utils.data_import import load_json_data
 from multiprocessing import Pool
 import os
@@ -13,8 +14,8 @@ def get_filtered_data(filters, app):
       'keyword_filter': filter_based_on_keyword,
       'avgview_filter': filter_based_on_avg_views,
       'socialid_filter': filter_based_on_id_available,
-      'username_filter' : filter_based_on_username
-
+      'username_filter' : filter_based_on_username,
+      'country_filter' : filter_based_on_country
       }
    user_data = load_json_data(os.path.join(app.root_path,'static','user-info.json'))
    return parallel_filter(user_data, filters, filter_function_mapper)

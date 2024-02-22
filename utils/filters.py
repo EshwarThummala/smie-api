@@ -47,3 +47,9 @@ def filter_based_on_username(json_object, given_approximate_username):
     if(search_result):
       return True
   return False
+
+def filter_based_on_country(json_object, given_country):
+  user_profile = json_object.get('user_profile')
+  if(user_profile and user_profile.get('country', None) == given_country):
+    return True
+  return False
