@@ -29,9 +29,10 @@ Make sure you have the following installed on your local machine:
     ```bash
     python app.py
     ```
+    - After the above command, if everything is successful, the api should be up and running in localhost port 5000. 
 
 4. **Make a POST request using Postman:**
-
+    - The above step should be enough for the UI to fetch the results from the api runing in localhost port 5000. But if you did not setup the UI yet, download and install postman from [here](https://www.postman.com/downloads/).
     - Open Postman and create a new request.
     - Set the request type to POST.
     - Enter the URL `http://localhost:5000` as the request URL.
