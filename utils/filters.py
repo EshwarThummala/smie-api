@@ -31,9 +31,7 @@ def filter_based_on_id_available(json_object, given_social_ids):
   social_media_ids = json_object.get('social_media')
   if(social_media_ids):
     for given_social_id in given_social_ids:
-      if(not social_media_ids.get(given_social_id)):
-        return False
-      elif(social_media_ids.get(given_social_id) == ''):
+      if(not social_media_ids.get(given_social_id) or social_media_ids.get(given_social_id) == ''):
         return False
   else:
     return False

@@ -39,6 +39,7 @@ def apply_filters(json_data, filters, filter_function_mapper):
       for filter in current_filters:
          if(not filter_function_mapper[filter](json_object, filters[filter])):
             passed_filter = False
+            break
       if(passed_filter):
          filtered_data.append(json_object)
    return filtered_data
